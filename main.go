@@ -27,6 +27,8 @@ func main() {
 
 	r.GET("/", controllers.GetQuiz)
 	r.POST("/", controllers.PostQuiz)
+	r.POST("/login", controllers.Login)
+	r.POST("/signup", controllers.SignUp)
 
 	r.Run()
 }

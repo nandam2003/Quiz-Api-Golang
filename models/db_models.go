@@ -11,13 +11,15 @@ type User struct {
 
 type Quiz struct {
 	gorm.Model
-	Name string `gorm:"not null"`
+	Name      string `gorm:"not null"`
+	Questions []Question
 }
 
 type Question struct {
 	gorm.Model
 	QuizID   uint   `gorm:"index;not null"`
 	Question string `gorm:"not null"`
+	Opts     []Answer
 }
 
 type Answer struct {

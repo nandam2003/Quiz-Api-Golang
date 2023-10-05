@@ -2,6 +2,8 @@ package models
 
 type UserJson struct {
 	Username string `json:"username"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
 }
 
 type QuizJson struct {
